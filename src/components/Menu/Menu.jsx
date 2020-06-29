@@ -15,25 +15,25 @@ var MenuContainer = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    ${props =>
+    ${(props) =>
       !props.openMenu &&
       css`
-        a:not(:first-child) {
+        a {
           display: none;
         }
         .icon {
-          position: absolute;
-          right: 0;
-          top: 0;
-          float: right;
-          display: block;
+          // position: absolute;
+          // right: 0;
+          // top: 0;
+          // float: right;
+          // display: block;
         }
       `}
   }
 
   @media screen and (max-width: 600px) {
-    position: absolute;
-    ${props =>
+    position: relative;
+    ${(props) =>
       props.openMenu &&
       css`
         background: red;
@@ -65,10 +65,21 @@ var HorizontalMenuItem = styled.a`
   &:hover {
     color: red;
   }
+`;
 
-  &:active {
-    background-color: #4caf50;
-    color: grey;
+var MenuItemContainer = styled.div`
+  @media screen and (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+`;
+
+var MenuIconContainer = styled.div`
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    text-align: right;
   }
 `;
 
@@ -88,13 +99,18 @@ export default function Menu() {
       className={`topnav ${openMenu ? "responsive" : ""}`}
       openMenu={openMenu}
     >
-      <HorizontalMenuItem href="#home">Home</HorizontalMenuItem>
-      <HorizontalMenuItem href="#placeholder">News</HorizontalMenuItem>
-      <HorizontalMenuItem href="#about">Contact</HorizontalMenuItem>
-      <HorizontalMenuItem href="#test">About</HorizontalMenuItem>
-      <button class="icon" onClick={toggleNavigation}>
-        <i className="fa fa-bars"></i>
-      </button>
+      <MenuItemContainer>
+        <HorizontalMenuItem href="#home">Home</HorizontalMenuItem>
+        <HorizontalMenuItem href="#placeholder">News</HorizontalMenuItem>
+        <HorizontalMenuItem href="#about">Contact</HorizontalMenuItem>
+        <HorizontalMenuItem href="#test">About</HorizontalMenuItem>
+
+        <MenuIconContainer>
+          <button class="icon" onClick={toggleNavigation}>
+            <i className="fa fa-bars icon"></i>
+          </button>
+        </MenuIconContainer>
+      </MenuItemContainer>
     </MenuContainer>
   );
 }

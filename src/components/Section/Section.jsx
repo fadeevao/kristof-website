@@ -11,5 +11,9 @@ var StyledSection = styled.div`
 `;
 
 export default function Section(props) {
-  return <StyledSection height={props.height}>{props.children}</StyledSection>;
+  return (
+    <StyledSection height={props.height} id={props.id}>
+      {props.children}
+    </StyledSection>
+  );
 }
