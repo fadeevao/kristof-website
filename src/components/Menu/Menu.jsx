@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
+import Burger from "react-css-burger"; //https://github.com/mattvox/react-css-burger
 
 var MenuContainer = styled.div`
   @media screen and (min-width: 601px) {
@@ -22,11 +23,8 @@ var MenuContainer = styled.div`
           display: none;
         }
         .icon {
-          // position: absolute;
-          // right: 0;
-          // top: 0;
-          // float: right;
-          // display: block;
+          position: absolute;
+          right: 1rem;
         }
       `}
   }
@@ -40,8 +38,7 @@ var MenuContainer = styled.div`
         width: 100%;
         .icon {
           position: absolute;
-          right: 0;
-          top: 0;
+          right: 1rem;
           float: right;
           display: block;
         }
@@ -84,32 +81,33 @@ var MenuIconContainer = styled.div`
 `;
 
 export default function Menu() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [active, setActive] = useState(false);
 
   function toggleNavigation() {
-    if (openMenu) {
-      setOpenMenu(false);
-    } else {
-      setOpenMenu(true);
-    }
+    setActive(!active);
   }
 
   return (
     <MenuContainer
-      className={`topnav ${openMenu ? "responsive" : ""}`}
-      openMenu={openMenu}
+      className={`topnav ${active ? "responsive" : ""}`}
+      openMenu={active}
     >
       <MenuItemContainer>
+        <MenuIconContainer>
+          <div class="icon">
+            <Burger
+              onClick={toggleNavigation}
+              active={active}
+              color="#FFFFFF"
+              burger="squeeze"
+              hoverOpacity={0.8}
+            />
+          </div>
+        </MenuIconContainer>
         <HorizontalMenuItem href="#home">Home</HorizontalMenuItem>
         <HorizontalMenuItem href="#placeholder">News</HorizontalMenuItem>
         <HorizontalMenuItem href="#about">Contact</HorizontalMenuItem>
         <HorizontalMenuItem href="#test">About</HorizontalMenuItem>
-
-        <MenuIconContainer>
-          <button class="icon" onClick={toggleNavigation}>
-            <i className="fa fa-bars icon"></i>
-          </button>
-        </MenuIconContainer>
       </MenuItemContainer>
     </MenuContainer>
   );
