@@ -42,7 +42,7 @@ var MenuContainer = styled.div`
           float: right;
           display: block;
         }
-        ${HorizontalMenuItem} {
+        ${MenuLink} {
           float: none;
           display: block;
           text-align: left;
@@ -53,7 +53,7 @@ var MenuContainer = styled.div`
   }
 `;
 
-var HorizontalMenuItem = styled.a`
+var MenuLink = styled.a`
   padding: 2rem;
   text-align: center;
   text-decoration: none;
@@ -104,10 +104,10 @@ export default function Menu() {
             />
           </div>
         </MenuIconContainer>
-        <HorizontalMenuItem href="#home">Home</HorizontalMenuItem>
-        <HorizontalMenuItem href="#placeholder">News</HorizontalMenuItem>
-        <HorizontalMenuItem href="#about">Contact</HorizontalMenuItem>
-        <HorizontalMenuItem href="#test">About</HorizontalMenuItem>
+        <MenuLink href="#home">Home</MenuLink>
+        <MenuLink href="#placeholder">News</MenuLink>
+        <MenuLink href="#about">Contact</MenuLink>
+        <MenuLink href="#test">About</MenuLink>
       </MenuItemContainer>
     </MenuContainer>
   );
