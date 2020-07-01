@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Baloo+2:400);
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 .App {
   text-align: center;
@@ -7,6 +8,6 @@
 html,
 body {
   height: 100%;
-  font-family: "Baloo 2";
+  font-family: "Baloo 2" !important;
   font-size: 14px;
 }
