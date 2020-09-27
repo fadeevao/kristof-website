@@ -2,7 +2,8 @@ import React from "react";
 import Section from "../Section";
 import PageHeader from "../PageHeader";
 import Gallery from "../Gallery";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import InstagramEmbed from "react-instagram-embed";
 
 var Container = styled.div`
   border: black;
@@ -15,7 +16,7 @@ var Container = styled.div`
 var SectionContent = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: ${(props) => props.direction || "row"};
   @media screen and (max-width: 600px) {
     flex-direction: column;
   }
@@ -105,7 +106,7 @@ export default function Layout() {
                 src="https://cdn3.photoblogstop.com/wp-content/uploads/2012/07/Sierra_HDR_Panorama_DFX8048_2280x819_Q40_wm_mini.jpg"
                 alt="Krzysztof Wojtkiewicz"
               />
-            </Tile>{" "}
+            </Tile>
             <Tile>
               <Image
                 src="https://www.warringtonguardian.co.uk/resources/images/10827640?type=responsive-gallery-fullscreen"
@@ -115,7 +116,31 @@ export default function Layout() {
           </Tile>
         </SectionContent>
       </Section>
-      <Section>contacts</Section>
+      <Section>
+        <SectionContent direction="column">
+          <Header>Get in touch!</Header>
+          <Tile direction="column">
+            <div>
+              Reach out via <a href="mailto:kw@gmail.com">email</a>
+            </div>
+            <div>
+              Check out my art on instagram: <em>kristof87art</em>
+              <InstagramEmbed
+                url="https://www.instagram.com/p/CCWNoMzpTpe"
+                maxWidth={500}
+                hideCaption={true}
+                containerTagName="div"
+                protocol=""
+                injectScript
+                onLoading={() => {}}
+                onSuccess={() => {}}
+                onAfterRender={() => {}}
+                onFailure={() => {}}
+              />
+            </div>
+          </Tile>
+        </SectionContent>
+      </Section>
     </Container>
   );
 }
