@@ -61,7 +61,7 @@ export default function Layout() {
       <Section height="100vh">
         <PageHeader />
       </Section>
-      <Section>
+      <Section id="about">
         <SectionContent>
           <Tile>
             <Image
@@ -71,7 +71,7 @@ export default function Layout() {
           </Tile>
           <Tile>
             <div>
-              <Header>Who am I?</Header>
+              <Header>About me</Header>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
@@ -80,11 +80,11 @@ export default function Layout() {
           </Tile>
         </SectionContent>
       </Section>
-      <Section>
+      <Section id="artwork">
         <Header>My artwork</Header>
         <Gallery />
       </Section>
-      <Section>
+      <Section id="experience">
         <SectionContent>
           <Tile>
             <div>
@@ -116,7 +116,7 @@ export default function Layout() {
           </Tile>
         </SectionContent>
       </Section>
-      <Section>
+      <Section id="contacts">
         <SectionContent direction="column">
           <Header>Get in touch!</Header>
           <Tile direction="column">

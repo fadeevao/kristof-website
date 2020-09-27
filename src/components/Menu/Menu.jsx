@@ -104,10 +104,10 @@ export default function Menu() {
             />
           </div>
         </MenuIconContainer>
-        <MenuLink href="#home">Home</MenuLink>
-        <MenuLink href="#placeholder">News</MenuLink>
-        <MenuLink href="#about">Contact</MenuLink>
-        <MenuLink href="#test">About</MenuLink>
+        <MenuLink href="#about">About</MenuLink>
+        <MenuLink href="#artwork">Artwork</MenuLink>
+        <MenuLink href="#experience">Experiences</MenuLink>
+        <MenuLink href="#contacts">Contacts</MenuLink>
       </MenuItemContainer>
     </MenuContainer>
   );
