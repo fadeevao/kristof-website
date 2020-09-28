@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Burger from "react-css-burger"; //https://github.com/mattvox/react-css-burger
+import * as Scroll from "react-scroll"; //https://www.npmjs.com/package/react-scroll
+
+var Link = Scroll.Link;
 
 var MenuContainer = styled.div`
   @media screen and (min-width: 601px) {
@@ -53,7 +56,7 @@ var MenuContainer = styled.div`
   }
 `;
 
-var MenuLink = styled.a`
+var MenuLink = styled.span`
   padding: 2rem;
   text-align: center;
   text-decoration: none;
@@ -82,6 +85,11 @@ var MenuIconContainer = styled.div`
 
 export default function Menu() {
   const [active, setActive] = useState(false);
+  const menuItems = new Map();
+  menuItems.set("About", "about");
+  menuItems.set("Artwork", "artwork");
+  menuItems.set("Experiences", "experiences");
+  menuItems.set("Contacts", "contacts");
 
   function toggleNavigation() {
     setActive(!active);
@@ -94,7 +102,7 @@ export default function Menu() {
     >
       <MenuItemContainer>
         <MenuIconContainer>
-          <div class="icon">
+          <div className="icon">
             <Burger
               onClick={toggleNavigation}
               active={active}
@@ -104,10 +112,22 @@ export default function Menu() {
             />
           </div>
         </MenuIconContainer>
-        <MenuLink href="#about">About</MenuLink>
-        <MenuLink href="#artwork">Artwork</MenuLink>
-        <MenuLink href="#experience">Experiences</MenuLink>
-        <MenuLink href="#contacts">Contacts</MenuLink>
+        {Array.from(menuItems, ([key, value]) => {
+          return (
+            <MenuLink key={key}>
+              <Link
+                activeClass="active"
+                to={value}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                {key}
+              </Link>
+            </MenuLink>
+          );
+        })}
       </MenuItemContainer>
     </MenuContainer>
   );

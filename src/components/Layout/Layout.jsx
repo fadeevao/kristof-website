@@ -84,7 +84,7 @@ export default function Layout() {
         <Header>My artwork</Header>
         <Gallery />
       </Section>
-      <Section id="experience">
+      <Section id="experiences">
         <SectionContent>
           <Tile>
             <div>
