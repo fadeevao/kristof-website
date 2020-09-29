@@ -25,7 +25,7 @@ var WelcomeText = styled.div`
 
   @media screen and (max-width: 600px) {
     padding: 0rem;
-    top: 70%;
+    top: 90%;
   }
 `;
 

@@ -56,7 +56,7 @@ var MenuContainer = styled.div`
   }
 `;
 
-var MenuLink = styled.span`
+var MenuLink = styled(Link)`
   padding: 2rem;
   text-align: center;
   text-decoration: none;
@@ -64,6 +64,12 @@ var MenuLink = styled.span`
 
   &:hover {
     color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    &:hover {
+      color: white;
+    }
   }
 `;
 
@@ -114,17 +120,16 @@ export default function Menu() {
         </MenuIconContainer>
         {Array.from(menuItems, ([key, value]) => {
           return (
-            <MenuLink key={key}>
-              <Link
-                activeClass="active"
-                to={value}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                {key}
-              </Link>
+            <MenuLink
+              key={key}
+              activeClass="active"
+              to={value}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              {key}
             </MenuLink>
           );
         })}
