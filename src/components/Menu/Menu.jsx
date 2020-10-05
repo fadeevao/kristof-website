@@ -121,10 +121,11 @@ export default function Menu() {
         {Array.from(menuItems, ([key, value]) => {
           return (
             <MenuLink
+              onClick={toggleNavigation}
               key={key}
               activeClass="active"
               to={value}
-              spy={true}
+              spy={false}
               smooth={true}
               offset={0}
               duration={500}
