@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Menu from "../Menu";
 import deep_water from "../../assets/images/deep_water.jpg";
 
+import * as Scroll from "react-scroll"; //https://www.npmjs.com/package/react-scroll
+
+var Link = Scroll.Link;
+
 var BannerContainer = styled.div`
   overflow: hidden;
 `;
@@ -51,7 +55,7 @@ var BannerSubheading = styled.div`
   margin: auto;
 `;
 
-var LinkButton = styled.a`
+var LinkButton = styled(Link)`
   background-color: #f44336;
   color: white;
   padding: 1.5rem 4rem;
@@ -59,6 +63,7 @@ var LinkButton = styled.a`
   text-decoration: none;
   display: inline-block;
   font-size: 1.5rem;
+  cursor: pointer;
 
   &:hover {
     background-color: red;
@@ -82,7 +87,16 @@ export default function PageHeader() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris
           </BannerSubheading>
-          <LinkButton href="#gallery">Dive in</LinkButton>
+          <LinkButton
+            activeClass="active"
+            to="about"
+            spy={false}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Dive in
+          </LinkButton>
         </WelcomeText>
       </BannerContainer>
     </div>

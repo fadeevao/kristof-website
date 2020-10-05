@@ -61,6 +61,7 @@ var MenuLink = styled(Link)`
   text-align: center;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 
   &:hover {
     color: red;
