@@ -32,6 +32,11 @@ var WelcomeText = styled.div`
 var BannerHeading = styled.div`
   padding-bottom: 1rem;
   font-size: 3.5rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
 `;
 
 var BannerSubheading = styled.div`
@@ -57,6 +62,10 @@ var LinkButton = styled.a`
 
   &:hover {
     background-color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 1rem 2rem;
   }
 `;
 

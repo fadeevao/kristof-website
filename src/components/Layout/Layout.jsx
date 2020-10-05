@@ -3,7 +3,7 @@ import Section from "../Section";
 import PageHeader from "../PageHeader";
 import Gallery from "../Gallery";
 import styled from "styled-components";
-import InstagramEmbed from "react-instagram-embed";
+import InstagramEmbed from "react-instagram-embed"; //https://www.npmjs.com/package/react-instagram-embed
 
 var Container = styled.div`
   border: black;
@@ -35,6 +35,10 @@ var Tile = styled.div`
   justify-content: center;
 
   flex-direction: ${(props) => props.direction || "row"};
+
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 var Header = styled.p`
@@ -47,6 +51,10 @@ var Header = styled.p`
   align-items: center;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 var Image = styled.img`
