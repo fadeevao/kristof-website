@@ -5,7 +5,7 @@ var StyledSection = styled.div`
   border: orange;
   border-width: 10px;
   border-style: solid;
-  height: ${props => props.height || "30%"};
+  height: ${(props) => props.height || "30%"};
   margin-block-end: 8px;
   position: relative;
 `;
