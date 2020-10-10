@@ -11,3 +11,8 @@ body {
   font-family: "Baloo 2" !important;
   font-size: 14px;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
