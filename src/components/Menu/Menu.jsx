@@ -19,6 +19,7 @@ var MenuContainer = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    position: relative;
     ${(props) =>
       !props.openMenu &&
       css`
@@ -30,13 +31,11 @@ var MenuContainer = styled.div`
           right: 1rem;
         }
       `}
-  }
 
-  @media screen and (max-width: 600px) {
-    position: relative;
     ${(props) =>
       props.openMenu &&
       css`
+        padding-top: 1rem;
         background: red;
         width: 100%;
         .icon {

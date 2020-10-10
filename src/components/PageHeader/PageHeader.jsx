@@ -25,7 +25,7 @@ var WelcomeText = styled.div`
   transform: translate(-50%, -50%);
   color: wheat;
   text-align: center;
-  padding: 0rem 3rem;
+  // padding: 0rem 3rem;
 
   @media screen and (max-width: 600px) {
     padding: 0rem;

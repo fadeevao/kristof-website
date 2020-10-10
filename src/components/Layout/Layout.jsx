@@ -6,9 +6,9 @@ import PageHeader from "../PageHeader";
 import styled from "styled-components";
 
 var Container = styled.div`
-  border: black;
-  border-width: 10px;
-  border-style: solid;
+  // border: black;
+  // border-width: 10px;
+  // border-style: solid;
   height: 100%;
   margin-block-end: 8px;
 `;

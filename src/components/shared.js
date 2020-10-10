@@ -10,8 +10,7 @@ export var SectionContent = styled.div`
 `;
 
 export var Tile = styled.div`
-  background-color: #f1f1f1;
-  margin: 10px;
+  background-color: ${(props) => props.backgroundColour || " #f1f1f1"};
   padding: 20px;
   font-size: 2rem;
   flex: 1;
@@ -29,7 +28,6 @@ export var Tile = styled.div`
 `;
 
 export var Header = styled.p`
-  margin: 10px;
   padding: 20px;
   font-size: 2.5rem;
   flex: 1;

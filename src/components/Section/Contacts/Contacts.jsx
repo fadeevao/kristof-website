@@ -10,7 +10,7 @@ export default function Contacts(props) {
     <Section id="contacts">
       <SectionContent direction="column">
         <Header>Get in touch!</Header>
-        <Tile direction="column">
+        <Tile direction="column" backgroundColour="white">
           <div>
             Reach out via <a href="mailto:kw@gmail.com">email</a>
           </div>
