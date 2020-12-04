@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../SectionComponent/Section";
 
-import { Image, Tile, Header, SectionContent } from "../../shared";
+import { Image, Tile, Header, SectionContent, TextContent } from "../../shared";
 
 export default function About(props) {
   return (
@@ -16,10 +16,12 @@ export default function About(props) {
         <Tile>
           <div>
             <Header>About me</Header>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            <TextContent>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            </TextContent>
           </div>
         </Tile>
       </SectionContent>

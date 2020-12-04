@@ -20,7 +20,7 @@ export var Tile = styled.div`
   display: flex;
   justify-content: center;
 
-  flex-direction: ${(props) => props.direction || "row"};
+  flex-direction: ${(props) => props.direction || "row"};About
 
   @media screen and (max-width: 600px) {
     font-size: 1rem;
@@ -31,6 +31,7 @@ export var Header = styled.p`
   padding: 20px;
   font-size: 2.5rem;
   flex: 1;
+  font-family: "Arvo";
 
   text-align: center;
   align-items: center;
@@ -48,4 +49,8 @@ export var Image = styled.img`
   object-fit: contain;
 `;
 
-export default { Image, Header, Tile, SectionContent };
+export var TextContent = styled.div`
+  font-size: 1.3rem
+`;
+
+export default { Image, Header, Tile, SectionContent, TextContent };

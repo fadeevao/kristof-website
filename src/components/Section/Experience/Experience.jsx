@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../SectionComponent/Section";
 
-import { Tile, Header, SectionContent, Image } from "../../shared";
+import { Tile, Header, SectionContent, Image, TextContent } from "../../shared";
 
 export default function Experience(props) {
   return (
@@ -10,15 +10,19 @@ export default function Experience(props) {
         <Tile>
           <div>
             <Header>Ferens Art Gallery</Header>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            <Header>My Experience</Header>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            <TextContent>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            <TextContent>
+            </TextContent>
+              <Header>My Experience</Header>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            </TextContent>
           </div>
         </Tile>
         <Tile direction="column">
