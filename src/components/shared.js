@@ -11,7 +11,7 @@ export var SectionContent = styled.div`
 
 export var Tile = styled.div`
   background-color: ${(props) => props.backgroundColour || " #f1f1f1"};
-  padding: 20px;
+  padding: 1rem;
   font-size: 2rem;
   flex: 1;
 
@@ -28,7 +28,7 @@ export var Tile = styled.div`
 `;
 
 export var Header = styled.p`
-  padding: 20px;
+  padding: 1.5rem;
   font-size: 2.5rem;
   flex: 1;
   font-family: "Arvo";

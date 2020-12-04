@@ -6,7 +6,7 @@ import * as Scroll from "react-scroll"; //https://www.npmjs.com/package/react-sc
 var Link = Scroll.Link;
 
 var MenuContainer = styled.div`
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 600px) {
     float: right;
     padding: 1rem 1rem 2rem 0rem;
     position: absolute;
