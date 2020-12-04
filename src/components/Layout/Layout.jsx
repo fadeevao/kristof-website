@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../Section/SectionComponent";
-import { About, Artwork, Contacts, Experience } from "../Section";
+import { About, Artwork, Contacts, Experience, ScrollToTop } from "../Section";
 
 import PageHeader from "../PageHeader";
 import styled from "styled-components";
@@ -22,6 +22,7 @@ export default function Layout() {
       <Artwork />
       <Experience />
       <Contacts />
+      <ScrollToTop />
     </Container>
   );
 }
