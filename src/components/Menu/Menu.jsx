@@ -36,7 +36,7 @@ var MenuContainer = styled.div`
       props.openMenu &&
       css`
         padding-top: 1rem;
-        background: red;
+        background: #051836;
         width: 100%;
         .icon {
           position: absolute;
@@ -44,12 +44,22 @@ var MenuContainer = styled.div`
           float: right;
           display: block;
         }
+
+        @media screen and (max-width: 600px) {
+          padding-bottom: 1rem;
+        }
+
         ${MenuLink} {
           float: none;
           display: block;
           text-align: left;
           color: black;
           padding: 0.5rem 0;
+
+          @media screen and (max-width: 600px) {
+            color: #f1f1f1;
+            font-size: 1.3rem;
+          }
         }
       `}
   }

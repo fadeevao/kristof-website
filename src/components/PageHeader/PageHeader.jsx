@@ -39,7 +39,7 @@ var BannerHeading = styled.div`
 
   @media screen and (max-width: 600px) {
     font-size: 2rem;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
   }
 `;
 
@@ -49,7 +49,7 @@ var BannerSubheading = styled.div`
     padding: 0rem;
   }
 
-  padding: 0rem 3rem 1rem 3rem;
+  padding: 0rem 3rem 2.5rem 3rem;
   font-size: 1.5rem;
   width: 60%;
   margin: auto;
