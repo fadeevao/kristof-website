@@ -20,7 +20,7 @@ export var Tile = styled.div`
   display: flex;
   justify-content: center;
 
-  flex-direction: ${(props) => props.direction || "row"};About
+  flex-direction: ${(props) => props.direction || "row"};
 
   @media screen and (max-width: 600px) {
     font-size: 1rem;
@@ -50,7 +50,8 @@ export var Image = styled.img`
 `;
 
 export var TextContent = styled.div`
-  font-size: 1.3rem
+  font-size: 1.3rem;
+  padding: ${(props) => props.padding || "0"}rem;
 `;
 
 export default { Image, Header, Tile, SectionContent, TextContent };

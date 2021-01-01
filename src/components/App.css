@@ -13,7 +13,21 @@ body {
   margin: 0;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0;
   background: transparent;
+} */
+
+.scrollTop {
+  position: fixed;
+  width: 100%;
+  bottom: 2.5rem;
+  /* align-items: center; */
+  height: 20px;
+  /* justify-content: center; */
+  /* z-index: 1000; */
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
 }
