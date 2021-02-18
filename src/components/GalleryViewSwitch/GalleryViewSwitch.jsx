@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
 import Gallery from "../Gallery";
+import { images } from "../constants";
 
 var SwitchContainer = styled.div`
   text-align: center;
