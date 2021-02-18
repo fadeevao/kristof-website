@@ -30,26 +30,27 @@ var SwitchButton = styled.span`
     `}
 `;
 
-export default function GalleryViewSwitch(props) {
-  const [active, setActive] = useState(true);
+export default function GalleryViewSwitch() {
+  const [galleryActive, setGalleryActive] = useState(true);
+  const [detailedViewActive, setDetailedViewActive] = useState(false);
 
   function toggleNavigation() {
-    console.log("active");
-    setActive(!active);
+    setGalleryActive(!galleryActive);
+    setDetailedViewActive(!detailedViewActive);
   }
 
   return (
     <SwitchContainer>
-      <SwitchButton active={active} onClick={toggleNavigation}>
+      <SwitchButton active={galleryActive} onClick={toggleNavigation}>
         Gallery View
       </SwitchButton>
-      <SwitchButton active={!active} onClick={toggleNavigation}>
+      <SwitchButton active={detailedViewActive} onClick={toggleNavigation}>
         Detailed View
       </SwitchButton>
-      <SwitchContent active={active}>
+      <SwitchContent active={galleryActive}>
         <Gallery />
       </SwitchContent>
-      <SwitchContent active={!active}>
+      <SwitchContent active={detailedViewActive}>
         <p>detailed view TBC</p>
       </SwitchContent>
     </SwitchContainer>
