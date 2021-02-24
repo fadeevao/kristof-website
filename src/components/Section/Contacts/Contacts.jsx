@@ -15,6 +15,7 @@ var InstagramIcon = styled(FaInstagram)`
   :active {
     color: black;
   }
+  color: #f44336;
 
   @media screen and (max-width: 600px) {
     height: 1.5rem;
